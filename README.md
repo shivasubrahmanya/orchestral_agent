@@ -11,7 +11,10 @@ Unlike simple "text-to-code" generators, this system follows a strict **Test-Dri
 - **Multi-Agent Architecture**: Five specialized agents (Planner, Coder, Tester, Fixer, Judge) collaborate to solve problems.
 - **Automated TDD Cycle**: Enforces a Plan → Code → Test → Fail → Fix → Verify loop.
 - **Self-Healing Code**: Detects failures in generated code and autonomously patches them.
-- **Multi-LLM Support**: Seamlessly works with **Google Gemini** or **OpenAI GPT** models.
+- **Dual-LLM Support**:
+    - **Google Gemini**: Uses `gemini-flash-latest` (Recommended). Prioritized if both keys are present.
+    - **OpenAI GPT**: Uses `gpt-3.5-turbo`.
+- **Robustness**: Handles API rate limits with exponential backoff and retries.
 - **Mock Mode**: Includes a simulation mode to demonstrate workflows without using API credits.
 - **Detailed Logging**: Provides color-coded, real-time feedback on every phase of the orchestration.
 
